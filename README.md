@@ -25,7 +25,6 @@ testcase：测试用例集
 main.py：主函数
 pytest.ini：pytest配置文件
 
-
 ### 测试用例说明
 1. testcase目录下test.py包含两个class：TestAPPCase、TestAPICase，分别对应APP、API自动化测试。  
 其中test_app_login、test_api_query、test_api_write分别包含success、fail的测试用例数据。
@@ -40,6 +39,17 @@ pytest.ini：pytest配置文件
 #### 运行项目
 1. 启动appium服务  
 2. 运行main.py文件
+
+### 运行截图
+运行成功后，预期结果应包含3个错误数据导致的failed，和6个passed
+```
+=========================== short test summary info ============================
+FAILED testcase/test.py::TestAPPCase::test_app_login[WRONG-WRONG-WRONG_CASE]
+FAILED testcase/test.py::TestAPICase::test_api_query[10000] - assert 0
+FAILED testcase/test.py::TestAPICase::test_api_write[0] - assert 0
+=================== 3 failed, 6 passed, 1 warning in 46.78s ====================
+```  
+![image](./report/report-sample.png)
 
 ### TODO
 - 测试报告邮件、IM通知  
