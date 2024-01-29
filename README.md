@@ -40,8 +40,8 @@ pytest.ini：pytest配置文件
 1. 启动appium服务  
 2. 运行main.py文件
 
-### 运行截图
-运行成功后，预期结果应包含3个错误数据导致的failed，和6个passed
+### 运行结果
+运行成功后，预期结果应包含3个failed（错误测试数据导致），和6个passed
 ```
 =========================== short test summary info ============================
 FAILED testcase/test.py::TestAPPCase::test_app_login[WRONG-WRONG-WRONG_CASE]
