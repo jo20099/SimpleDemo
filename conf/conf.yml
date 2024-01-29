@@ -1,0 +1,41 @@
+device:
+  device_name: 127.0.0.1:5555  # adb连接设备信息
+  os_version: "12"  # adb连接设备系统版本
+
+appium:
+  server: http://127.0.0.1:4723  # appium server url
+
+app:
+  package_name: com.tencent.mobileqq
+  appActivity: .activity.SplashActivity
+  account:  # 按实际填写
+  passwd:  # 按实际填写
+  nick_name:   # 按实际填写
+  wrong_case: WRONG, WRONG, WRONG_CASE
+
+api_test:
+  headers: {
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': '*/*',
+  'Host': 'gorest.co.in',
+  'Connection': 'keep-alive'
+  }
+  token:  # gorest上生成https://gorest.co.in/
+
+  query_api:
+    method: GET
+    host: https://gorest.co.in
+    path: /public/v2/users
+    param:
+      id: 6079163  # 如不存在可换一个https://gorest.co.in/public/v2/users/
+      failed_id: 10000
+
+  create_comments_api:
+    method: POST
+    host: https://gorest.co.in
+    path_query: /public/v2/posts
+    path_post: /public/v2/posts/%s/comments?access-token=
+    param:
+      name: joann
+      body: hello
+      email: samp@dde.com
